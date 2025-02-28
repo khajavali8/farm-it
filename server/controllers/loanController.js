@@ -46,9 +46,7 @@ const loanController = {
     }
   },
 
-  /**
-   * Repay a loan
-   */
+
   async repayLoan(req, res) {
     try {
       const { amount } = req.body;
@@ -98,10 +96,6 @@ const loanController = {
     }
   },
 
-
-  /**
-   * Get repayment schedule for a loan
-   */
   async getRepaymentSchedule(req, res) {
     try {
       const loanId = req.params.id;
@@ -141,9 +135,7 @@ async getMyLoans(req, res) {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 },
-  /**
-   * Get all investments made by the logged-in user
-   */
+
   async getMyInvestments(req, res) {
     try {
         const investments = await Transaction.find({ from: req.user.id, type: "investment" })
@@ -168,9 +160,6 @@ async getMyLoans(req, res) {
 },
 
 
-  /**
-   * Get all available loans for investment
-   */
   async getAvailableLoans(req, res) {
     try {
       const loans = await Loan.find({ status: "pending" }).populate("farm", "name location");
@@ -180,9 +169,6 @@ async getMyLoans(req, res) {
     }
   },
 
-  /**
-   * Invest in a loan
-   */
   async investInLoan(req, res) {
     try {
       const { amount } = req.body;
