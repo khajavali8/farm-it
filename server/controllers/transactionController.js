@@ -38,9 +38,13 @@ const transactionController = {
         { $sort: { _id: 1 } }
       ]);
   
-      // Fetch repayment data
       const repayments = await Transaction.aggregate([
-        { $match: { from: userId, type: 'repayment' } },
+        { 
+          $match: { 
+            $or: [{ from: userId }, { to: userId }], 
+            type: 'repayment' 
+          } 
+        },
         { $group: { _id: { $month: "$createdAt" }, totalAmount: { $sum: "$amount" } } },
         { $sort: { _id: 1 } }
       ]);
@@ -55,6 +59,7 @@ const transactionController = {
       res.status(500).json({ message: "Server error" });
     }
   },
+  
 
   async getTransactionDetails(req, res) {
     try {
