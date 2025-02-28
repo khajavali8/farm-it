@@ -1,0 +1,234 @@
+/* Center the auth container with a subtle background gradient */
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+/* Elegant Card Styling */
+.auth-card {
+    background: white;
+    width: 380px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    transform: scale(0.85);
+    animation: slideUp 0.6s ease-in-out forwards;
+}
+
+/* Beautiful Gradient Header */
+.auth-header {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    letter-spacing: 1px;
+    animation: fadeInDown 0.6s ease-in-out forwards;
+}
+
+/* Input Fields with Beautiful Focus Effects */
+.input-group {
+    position: relative;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    background: #f9f9f9;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Floating Label Animation */
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: gray;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+/* When input is focused or has content */
+.input-group input:focus,
+.input-group input:not(:placeholder-shown) {
+    border-color: #6a11cb;
+    background: white;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: 5px;
+    font-size: 12px;
+    color: #6a11cb;
+}
+
+/* Auth Options with Smooth Hover Effects */
+.auth-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 12px 0;
+    
+}
+
+.auth-options a {
+    color: #6a11cb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.auth-options a:hover {
+    text-decoration: underline;
+}
+
+/* Stylish Button with Hover Effects */
+.auth-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(106, 17, 203, 0.3);
+}
+
+.auth-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #5a0fb2, #1d60e6);
+    box-shadow: 0px 8px 20px rgba(106, 17, 203, 0.5);
+}
+
+/* Footer Styling */
+.auth-footer {
+    margin-top: 18px;
+    font-size: 14px;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+.auth-footer a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+    color: #4e0e9e;
+}
+
+/* Role Dropdown Styling */
+.role-dropdown {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+    background: #f9f9f9;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/* Shake Animation for Errors */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Fade-in Animation for Form Elements */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.input-group {
+    animation: fadeIn 0.5s ease-in-out;
+    animation-fill-mode: both;
+}
+
+.input-group:nth-child(1) { animation-delay: 0.1s; }
+.input-group:nth-child(2) { animation-delay: 0.2s; }
+.input-group:nth-child(3) { animation-delay: 0.3s; }
+.input-group:nth-child(4) { animation-delay: 0.4s; }
+
+/* Slide-in Animation for Auth Card */
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.auth-card {
+    animation: slideIn 0.6s ease-in-out;
+}
+
+/* Hover Animation for Buttons */
+.auth-button {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.auth-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(106, 17, 203, 0.5);
+}
+
+/* Hover Animation for Links */
+.auth-footer a {
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+.auth-footer a:hover {
+    color: #4e0e9e;
+    text-decoration: underline;
+}
