@@ -120,14 +120,6 @@ const loanController = {
     }
   },
   
-  
-
-  /**
-   * Get all loans for the logged-in user
-   */
-/**
- * Get all loans for the logged-in user
- */
 async getMyLoans(req, res) {
   try {
     // Find farms owned by the logged-in user
