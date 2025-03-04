@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import axios from '../../services/api';
-import '../../App.css';
-import "../../styles/FarmITStyles.css";
+import '../../styles/FarmITStyles.css';
 
 const FarmForm = () => {
-  const [farm, setFarm] = useState({ name: '', location: '', size: '', farmType: '', description: '' });
+  const [farm, setFarm] = useState({
+    name: '',
+    location: '',
+    size: '',
+    farmType: '',
+    description: '',
+  });
   const [images, setImages] = useState([]);
 
   const handleChange = (e) => {
@@ -44,17 +49,17 @@ const FarmForm = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <div style={styles.card}>
-        <h2 style={styles.title}>Register Your Farm</h2>
-        <form onSubmit={handleSubmit} style={styles.form}>
+    <div className="upload-container">
+      <div className="upload-card">
+        <h2 className="upload-title">Register Your Farm</h2>
+        <form onSubmit={handleSubmit} className="upload-form">
           <input
             type="text"
             name="name"
             placeholder="Farm Name"
             onChange={handleChange}
             required
-            style={styles.input}
+            className="upload-input"
           />
           <input
             type="text"
@@ -62,7 +67,7 @@ const FarmForm = () => {
             placeholder="Location"
             onChange={handleChange}
             required
-            style={styles.input}
+            className="upload-input"
           />
           <input
             type="text"
@@ -70,7 +75,7 @@ const FarmForm = () => {
             placeholder="Farm Size (acres)"
             onChange={handleChange}
             required
-            style={styles.input}
+            className="upload-input"
           />
           <input
             type="text"
@@ -78,17 +83,17 @@ const FarmForm = () => {
             placeholder="Farm Type"
             onChange={handleChange}
             required
-            style={styles.input}
+            className="upload-input"
           />
           <textarea
             name="description"
             placeholder="Description"
             onChange={handleChange}
             required
-            style={styles.textarea}
+            className="upload-textarea"
           />
-          <div style={styles.fileInputContainer}>
-            <label htmlFor="file-upload" style={styles.fileInputLabel}>
+          <div className="file-input-container">
+            <label htmlFor="file-upload" className="file-input-label">
               Upload Images
             </label>
             <input
@@ -96,10 +101,10 @@ const FarmForm = () => {
               type="file"
               multiple
               onChange={handleFileChange}
-              style={styles.fileInput}
+              className="file-input"
             />
           </div>
-          <button type="submit" style={styles.button}>
+          <button type="submit" className="upload-button">
             Register Farm
           </button>
         </form>
@@ -109,91 +114,3 @@ const FarmForm = () => {
 };
 
 export default FarmForm;
-
-// Inline CSS styles for a beautiful design
-const styles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minHeight: '100vh',
-    backgroundColor: '#f0f4f8',
-    padding: '20px',
-  },
-  card: {
-    backgroundColor: '#ffffff',
-    borderRadius: '12px',
-    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-    padding: '30px',
-    maxWidth: '500px',
-    width: '100%',
-  },
-  title: {
-    textAlign: 'center',
-    color: '#333',
-    fontSize: '24px',
-    fontWeight: '600',
-    marginBottom: '20px',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '15px',
-  },
-  input: {
-    padding: '12px',
-    borderRadius: '8px',
-    border: '1px solid #ddd',
-    fontSize: '16px',
-    outline: 'none',
-    transition: 'border-color 0.3s ease',
-  },
-  inputFocus: {
-    borderColor: '#007bff',
-  },
-  textarea: {
-    padding: '12px',
-    borderRadius: '8px',
-    border: '1px solid #ddd',
-    fontSize: '16px',
-    height: '120px',
-    resize: 'vertical',
-    outline: 'none',
-    transition: 'border-color 0.3s ease',
-  },
-  fileInputContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '10px',
-  },
-  fileInputLabel: {
-    padding: '12px',
-    borderRadius: '8px',
-    backgroundColor: '#007bff',
-    color: '#fff',
-    textAlign: 'center',
-    fontSize: '16px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease',
-  },
-  fileInputLabelHover: {
-    backgroundColor: '#0056b3',
-  },
-  fileInput: {
-    display: 'none',
-  },
-  button: {
-    padding: '12px',
-    borderRadius: '8px',
-    border: 'none',
-    backgroundColor: '#28a745',
-    color: '#fff',
-    fontSize: '16px',
-    fontWeight: '600',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease',
-  },
-  buttonHover: {
-    backgroundColor: '#218838',
-  },
-};
