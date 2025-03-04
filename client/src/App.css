@@ -12,18 +12,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -49,23 +37,9 @@
   text-align: center;
   padding: 20px;
 }
-/* Navbar Styling */
-.nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  margin-top: 20px;
-  position: relative; /* Ensure it stays in place */
-  z-index: 1000; /* Make sure it appears above other content */
-  background-color: white; /* Ensure it is not transparent */
-  width: 100%;
-  padding: 10px 0;
-}
 
-/* Fix overlapping issue */
 body {
-  padding-top: 60px; /* Adjust if the navbar is being overlapped */
+  padding-top: 50px; /* Adjust if the navbar is being overlapped */
 }
 
 /* Ensure Links are visible */
