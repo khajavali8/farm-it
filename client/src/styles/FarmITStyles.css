@@ -728,6 +728,65 @@ footer {
   text-align: center;
 }
 
+/* About Us Section */
+.about-section {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 50px 20px;
+  color: #222;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  text-align: center;
+  background: #17a2b8; /* Teal Color */
+  color: white;
+  padding: 60px 20px;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card p {
+  font-style: italic;
+}
+
+/* Call to Action Section */
+.cta-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: darkgray; 
+  color: white;
+}
+
+.cta-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-title {
@@ -779,7 +838,7 @@ footer {
     background: white;
     border-radius: 10px;
     padding: 20px;
-    width: 250px; /* Fixed width for each card */
+    width: 200px; /* Fixed width for each card */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
@@ -886,4 +945,115 @@ footer {
     color: #666;
     margin-top: 20px;
   }
-  
+  /* Document Upload & Farm Form Page */
+.upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+  padding: 20px;
+}
+
+.upload-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.upload-title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.upload-input,
+.upload-select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.upload-input:focus,
+.upload-select:focus {
+  border-color: #007bff;
+}
+
+/* New styles for FarmForm */
+.upload-textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  height: 120px;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.upload-textarea:focus {
+  border-color: #007bff;
+}
+
+/* File Upload */
+.file-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.file-input-label {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-input-label:hover {
+  background-color: #0056b3;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Button */
+.upload-button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
