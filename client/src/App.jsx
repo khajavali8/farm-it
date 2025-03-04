@@ -70,8 +70,8 @@ function App() {
                     <Route path="/farmer/my-documents" element={<ProtectedRoute><MyDocuments /></ProtectedRoute>} />
                     <Route path="/farmer/:id/repayment-schedule" element={<ProtectedRoute><LoanRepaySchedule /></ProtectedRoute>} />
                     {/* Farmer Routes */}
-<Route path="/farmer/transactions" element={<ProtectedRoute><TransactionsFarmer /></ProtectedRoute>} />
-<Route path="/farmer/transactions/:id" element={<ProtectedRoute><TransactionDetailsFarmer /></ProtectedRoute>} />
+{/* <Route path="/farmer/transactions" element={<ProtectedRoute><TransactionsFarmer /></ProtectedRoute>} />
+<Route path="/farmer/transactions/:id" element={<ProtectedRoute><TransactionDetailsFarmer /></ProtectedRoute>} /> */}
 
 
                     <Route path="/farmer/transactions" element={<ProtectedRoute><TransactionsFarmer /></ProtectedRoute>} />
