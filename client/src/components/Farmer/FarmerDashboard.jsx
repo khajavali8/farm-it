@@ -14,10 +14,37 @@ const FarmerDashboard = () => {
     { path: "/farmer/transactions", icon: "💸", title: "My Transactions", description: "Monitor all your financial transactions." },
   ];
 
+  const tips = [
+    { title: "🌿 Crop Rotation", description: "Improve soil health and reduce pests by rotating crops each season." },
+    { title: "💧 Efficient Irrigation", description: "Use drip irrigation to save water and increase yield." },
+    { title: "🌞 Seasonal Planting", description: "Check the best planting time for each crop to maximize growth." },
+  ];
+
   return (
     <div className="page-container">
+
+      <div className="banner">
+        <h2>🚜 Grow Your Farm, Grow Your Future! 🌾</h2>
+        <p>Manage your farm efficiently, apply for loans, and track all your transactions in one place.</p>
+      </div>
+
       <div className="container">
-        <h1 className="dashboard-title">Welcome, Farmer!</h1>
+        <h1 className="dashboard-title">Welcome, Farmer! 👨‍🌾</h1>
+        <p className="dashboard-subtitle">
+          Explore the tools and features to manage your farm operations smoothly.
+        </p>
+
+        <div className="tips-section">
+          <h3>📌 Farming Tips & Resources</h3>
+          <ul>
+            {tips.map((tip, index) => (
+              <li key={index}>
+                <strong>{tip.title}</strong> - {tip.description}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="dashboard-grid">
           {dashboardItems.map((item, index) => (
             <Link to={item.path} key={index} className="dashboard-card">
@@ -30,6 +57,7 @@ const FarmerDashboard = () => {
           ))}
         </div>
       </div>
+
       <Footer />
     </div>
   );
