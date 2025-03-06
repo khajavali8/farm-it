@@ -20,7 +20,7 @@ const Navbar = () => {
                 <h2 style={{color:"lightcyan"}}>FARM-IT</h2>
             </div>
             <div style={styles.navLinks}>
-                <Link to="/" style={styles.link}>Home</Link>
+                {/* <Link to="/" style={styles.link}>Home</Link> */}
                 <Link to="/dashboard" style={styles.link}>Dashboard</Link>
                 <Link to="/common/report-issue" style={styles.link}>Report Issue</Link> 
 
