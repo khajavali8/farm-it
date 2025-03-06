@@ -6,7 +6,6 @@ import "../styles/FarmITStyles.css";
 const Home = () => {
   return (
     <div className="home-container">
-      {/* Hero Section */}
       <header className="hero">
         <div className="hero-content">
           <h1 className="hero-title" style={{color:"lightgray"}}>Welcome to Farm IT</h1>
@@ -19,7 +18,6 @@ const Home = () => {
         </div>
       </header>
 
-      {/* Features Section */}
       <section className="features-section">
         <h2 className="section-title">Our Key Features</h2>
         <div className="features-grid">
@@ -46,7 +44,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Us Section */}
       <section className="about-section">
         <div className="about-content">
           <h2 className="section-title">About Farm IT</h2>
@@ -79,7 +76,6 @@ const Home = () => {
         <Link to="/register" className="cta-button">Get Started</Link>
       </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
