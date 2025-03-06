@@ -1,4 +1,3 @@
-/* General Styles */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -12,12 +11,11 @@ h2 {
     color: #333;
 }
 
-/* Farm List Flexbox Layout */
 .farm-list {
     display: flex;
     gap: 20px;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    padding-bottom: 20px; /* Add padding to avoid cutting off shadows */
+    overflow-x: auto; 
+    padding-bottom: 20px; 
 }
 
 .farm-item {
@@ -26,9 +24,8 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-width: 300px; /* Minimum width for each card */
-    flex: 0 0 auto; /* Prevent flex items from shrinking */
-}
+    min-width: 300px; 
+    flex: 0 0 auto; 
 
 .farm-item:hover {
     transform: translateY(-5px);
@@ -82,7 +79,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Edit Form Modal */
 .edit-form {
     position: fixed;
     top: 0;
@@ -123,9 +119,7 @@ button:hover {
     width: 100%;
     margin-top: 10px;
 }
-/* Farmer Dashboard Styles */
 
-/* General Styles */
 .page-container {
     display: flex;
     flex-direction: column;
@@ -147,7 +141,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Navigation Menu */
 .nav {
     display: flex;
     flex-direction: column;
@@ -175,7 +168,6 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
@@ -187,16 +179,14 @@ h1 {
         font-size: 1rem;
     }
 }
-/* Delete Button */
 .delete-btn {
-    background-color: #dc3545; /* Red color */
+    background-color: #dc3545; 
     margin-left: 10px;
 }
 
 .delete-btn:hover {
     background-color: #b52b39;
 }
-/* === General Styles === */
 .page-container {
     display: flex;
     flex-direction: column;
@@ -207,7 +197,7 @@ h1 {
 .container {
     flex: 1;
     padding: 20px;
-    padding-top: 70px; /* Account for fixed Navbar */
+    padding-top: 70px;
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -247,7 +237,6 @@ h2 {
     color: #333;
 }
 
-/* === Transactions Table === */
 .transactions-table {
     width: 100%;
     border-collapse: collapse;
@@ -283,7 +272,6 @@ h2 {
     text-decoration: underline;
 }
 
-/* === My Loans === */
 .loan-card {
     background: white;
     padding: 20px;
@@ -382,8 +370,6 @@ h2 {
 .repayment-form button:hover {
     background-color: #218838;
 }
-
-/* === Responsive Design === */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
@@ -407,7 +393,6 @@ h2 {
     }
 }
   
-  /* General Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -434,8 +419,7 @@ table {
   tr:hover {
     background-color: #ddd;
   }
-  
-  /* Admin Dashboard */
+
   .admin-dashboard {
     text-align: center;
     padding: 20px;
@@ -468,7 +452,6 @@ table {
     color: white;
   }
   
-  /* Manage Users */
   .manage-users {
     padding: 20px;
   }
@@ -504,8 +487,7 @@ table {
   .manage-users button:last-child:hover {
     background-color: #c82333;
   }
-  
-  /* All Loans */
+
   .loans-container {
     padding: 20px;
   }
@@ -521,7 +503,6 @@ table {
     font-weight: bold;
   }
   
-  /* All Farms */
   .farms-container {
     padding: 20px;
   }
@@ -580,7 +561,6 @@ table {
     background-color: #218838;
   }
   
-  /* Issues */
   .issues-container {
     padding: 20px;
   }
@@ -619,26 +599,24 @@ table {
     color: red;
     font-weight: bold;
   }
- /* Home Container */
 .home-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url('D:/Farm-app/client/src/assets/farm5.jpg'); /* Update with correct path */
+  background-image: url('D:/Farm-app/client/src/assets/farm5.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white; /* Adjust text color for better visibility */
+  color: white; 
 }
 
-/* Hero Section */
 .hero {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;  background-color: rgba(0, 0, 0, 0.3); /* Darker overlay for better text visibility */
+  padding: 2rem;  background-color: rgba(0, 0, 0, 0.3); 
 
 }
 
@@ -649,29 +627,29 @@ table {
 .hero-title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Add shadow to text */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); 
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Add shadow to text */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); 
 }
 
 .cta-button {
   padding: 0.75rem 1.5rem;
-  background-color: #4CAF50; /* Green color for the button */
+  background-color: #4CAF50;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   font-size: 1.2rem;
   transition: background-color 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow to button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 .cta-button:hover {
-  background-color: #45a049; /* Darker green on hover */
-  transform: translateY(-2px); /* Slight lift on hover */
+  background-color: #45a049; 
+  transform: translateY(-2px); 
 }
 
 /* Features Section */
