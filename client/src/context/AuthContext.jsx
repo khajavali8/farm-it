@@ -6,7 +6,6 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Fetch user info on initial load
   useEffect(() => {
     const fetchUser = async () => {
       const token = localStorage.getItem("token");
