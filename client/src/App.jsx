@@ -40,7 +40,7 @@ import Issues from "./components/Admin/Issues";
 
 // Common Components
 import ReportIssue from "./components/Common/ReportIssue";
-import TransactionAnalytics from "./components/Investor/TransactionAnalytics"; // Ensure correct path
+import TransactionAnalytics from "./components/Investor/TransactionAnalytics"; 
 
 import "./styles.css";
 import "./App.css";
